@@ -64,10 +64,10 @@ function do_start {
   source target/env.bash
   docker compose -f target/docker-compose.yml up -d
 
-  wait_for_service "RABBITMQ" "target_rabbitmq" "15672"
-  wait_for_service "GERRIT" "target_gerrit" "8080"
-  wait_for_service "REMREM_PUBLISH" "target_publish" "8080"
-  wait_for_service "REMREM_GENERATE" "target_generate" "8080"
+  wait_for_service "RABBITMQ" "target-rabbitmq" "15672"
+  wait_for_service "GERRIT" "target-gerrit" "8080"
+  wait_for_service "REMREM_PUBLISH" "target-publish" "8080"
+  wait_for_service "REMREM_GENERATE" "target-generate" "8080"
 }
 
 function do_test {
